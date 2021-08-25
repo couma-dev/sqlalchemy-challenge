@@ -38,7 +38,7 @@ def welcome():
         f"/api/v1.0/[start_date format:yyyy-mm-dd]/[end_date format:yyyy-mm-dd]<br/>"
     )
 
-    @app.route("/api/v1.0/precipitation")
+@app.route("/api/v1.0/precipitation")
 def precipitation():
     # Create session from Python to the DATABASE
     session = Session(engine)
@@ -69,7 +69,7 @@ def precipitation():
 
 @app.route("/api/v1.0/stations")
 def stations():
-    # Create our session (link) from Python to the DB
+    # Create session from Python to the DATABASE
     session = Session(engine)
 
     """Return a list of all Stations"""
@@ -86,7 +86,7 @@ def stations():
 
 @app.route("/api/v1.0/tobs")
 def tobs():
-    # Create our session (link) from Python to the DB
+    # Create session from Python to the DATABASE
     session = Session(engine)
 
     """Return a list of all TOBs"""
@@ -116,7 +116,7 @@ def tobs():
     
 @app.route("/api/v1.0/<start_date>")
 def Start_date(start_date):
-    # Create our session (link) from Python to the DB
+    # Create session from Python to the DATABASE
     session = Session(engine)
 
     """Return a list of min, avg and max tobs for a start date"""
